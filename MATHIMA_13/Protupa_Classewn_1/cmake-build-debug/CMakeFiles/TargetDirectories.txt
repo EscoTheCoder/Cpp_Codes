@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/MATHIMA_13/Protupa_Classewn_1/cmake-build-debug/CMakeFiles/Protupa_Classewn_1.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_13/Protupa_Classewn_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_13/Protupa_Classewn_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/MATHIMA_9/Class_String_3/cmake-build-debug/CMakeFiles/Class_String_3.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_9/Class_String_3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_9/Class_String_3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,10 @@
+# ninja log v5
+3	340	7435386434855362	CMakeFiles/Include.dir/main.cpp.obj	5c3bb6ded5e15050
+0	131	7436267812347974	build.ninja	21c53a9ace872ca8
+340	412	7435386435556084	Include.exe	b19fc3a5adc9a367
+4	1279	7436267853950927	CMakeFiles/Include.dir/main.cpp.obj	5c3bb6ded5e15050
+1280	1582	7436267856948309	Include.exe	b19fc3a5adc9a367
+3	693	7436268729281106	CMakeFiles/Include.dir/main.cpp.obj	5c3bb6ded5e15050
+693	798	7436268730310044	Include.exe	b19fc3a5adc9a367
+5	757	7436269302567444	CMakeFiles/Include.dir/main.cpp.obj	5c3bb6ded5e15050
+758	868	7436269303646569	Include.exe	b19fc3a5adc9a367

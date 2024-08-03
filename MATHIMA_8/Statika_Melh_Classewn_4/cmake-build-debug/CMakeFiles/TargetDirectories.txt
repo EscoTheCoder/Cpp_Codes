@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/MATHIMA_8/Statika_Melh_Classewn_4/cmake-build-debug/CMakeFiles/Statika_Melh_Classewn_4.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_8/Statika_Melh_Classewn_4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_8/Statika_Melh_Classewn_4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/STL/Vector/cmake-build-debug/CMakeFiles/Vector.dir
+C:/Users/nikolas/Desktop/C++/STL/Vector/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/STL/Vector/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/Destructor/cmake-build-debug/CMakeFiles/Destructor.dir
+C:/Users/nikolas/Desktop/C++/Destructor/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/Destructor/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/Unsigned/cmake-build-debug/CMakeFiles/Unsigned.dir
+C:/Users/nikolas/Desktop/C++/Unsigned/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/Unsigned/cmake-build-debug/CMakeFiles/rebuild_cache.dir

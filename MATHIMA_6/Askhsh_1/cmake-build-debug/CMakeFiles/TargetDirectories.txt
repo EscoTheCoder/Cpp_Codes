@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/MATHIMA_6/Askhsh_1/cmake-build-debug/CMakeFiles/Askhsh_1.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_6/Askhsh_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_6/Askhsh_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/MATHIMA_10/Klhronomikothta_2/cmake-build-debug/CMakeFiles/Klhronomikothta_2.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_10/Klhronomikothta_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/MATHIMA_10/Klhronomikothta_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
