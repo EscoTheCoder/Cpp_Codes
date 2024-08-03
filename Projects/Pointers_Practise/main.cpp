@@ -22,6 +22,7 @@ ARRAY::ARRAY(int in_length) {
 }
 ARRAY::~ARRAY() {
     delete [] ptr;
+
 }
 
 void ARRAY::set_i(int i, int val) {
