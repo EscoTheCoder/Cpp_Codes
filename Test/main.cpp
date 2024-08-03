@@ -7,6 +7,7 @@
 
 using namespace std;
 int main() {
+    //test
     int seires;
     int stiles;
     char symbol;
