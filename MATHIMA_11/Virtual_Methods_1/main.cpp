@@ -59,7 +59,8 @@ public:
     void make_sound(); //einai virtual logo tis Animal
 };
 
-dog::dog(int inWeight, int inHeight,  string houseAddress) : animal(inWeight, inHeight),house_address(houseAddress) {
+dog::dog(int inWeight, int inHeight,  string houseAddress) :
+animal(inWeight, inHeight),house_address(houseAddress) {
 }
 
 dog::~dog() {

@@ -103,7 +103,7 @@ int main() {
 
             if (flag == true) {
                 cout << "Eisai grigoros telika mpravo"<<endl;
-            } 
+            }
             else {
                 if (cnt == 0) {
                     cout << "Eisai xazoulhs";
