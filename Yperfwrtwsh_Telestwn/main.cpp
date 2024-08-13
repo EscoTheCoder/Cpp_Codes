@@ -22,6 +22,7 @@ public:
     //int &operator[] (int i);
     friend complex operator+ (int left, complex &right); //operator +    uperfwrtwsh tou telesth +
     friend ostream &operator<<(ostream &left, const complex &right);
+	//friend istream &operator>>(istream &left, STRING &obj);
 private:
     double real;
     double imag;
@@ -116,6 +117,24 @@ ostream &operator<<(ostream &left, const complex &right){
     left<<"("<<right.real<<", "<<right.imag<<")";
     return left;
 }
+
+istream &operator>>(istream &left, STRING &obj){
+    char in_str[80];
+
+    left>>in_str;
+    if(obj.str!=NULL){
+    delete [] obj.str;
+    }
+    obj.str = new char [strlen(in_str)+1];  //+1 gia to \0
+    if(!obj.str){
+    cout<<"Error allocating memory";
+    }
+    obj.length= strlen(in_str);
+    strcpy(obj.str,in_str);
+
+    return left;
+}
+
 
 int main() {
 

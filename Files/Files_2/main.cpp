@@ -29,7 +29,7 @@ public:
     void add_Students(const Student &s);
     const vector<Student> &getStudents() const;
     void print() const;
-    void loadFromFile(const string &filename);
+    void loadFromFile(string &filename);
 };
 
 Student::Student(const string &name, const string &surname, int id, float avg) :
@@ -78,24 +78,29 @@ void Course::print() const {
     }
 }
 
-void Course::loadFromFile(const std::string &filename) {
-
+void Course::loadFromFile(string &filename) {
+    ifstream file(filename ,ios::in);
+    if(file.is_open()){
+        string line;
+        string name, surname;
+        int id;
+        float avg;
+        while(file>>name){
+            file>>surname>>id>>avg;
+            add_Students(Student(name,surname,id,avg));
+        }
+        file.close();
+    }
 }
 
 int main() {
 
-    Student s1;
-    Student s2("Nikolas","P",444,9);
-    Student s3("Kostas","S",11,10);
 
     Course c("C++");
-    c.add_Students(s1);
-    c.add_Students(s2);
-    c.add_Students(s3);
-    c.add_Students(Student("Stavros","R",1,8));
-
+    string file="students.txt";
+    c.loadFromFile(file);
     c.print();
-
+    
 
     return 0;
 }

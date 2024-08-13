@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/Ejetastikh/cmake-build-debug/CMakeFiles/Ejetastikh.dir
+C:/Users/nikolas/Desktop/C++/Ejetastikh/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/Ejetastikh/cmake-build-debug/CMakeFiles/rebuild_cache.dir

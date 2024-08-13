@@ -1,59 +1,48 @@
 #include <iostream>
+#include <vector>
+#include <unordered_map>
 using namespace std;
 
-class dummy{
-public:
-    dummy(int in_value);
-    ~dummy();
-    int getValue() const;
-    void setValue(int in_value);
-private:
-    int value;
-    int *ptr;
-};
+int singleNumber(vector<int>& nums) {
+    unordered_map<int,int> map;
 
-dummy::dummy(int in_value) {
-    value=in_value;
-    ptr=new int;
-    if(!ptr){
-        cout<<"Error allocating memory";
+    for(auto &i : nums){
+        map[i]++;
     }
-    *ptr=value;
+
+    for(auto &i : map){
+        if(i.second==1){
+            return i.first;
+        }
+    }
+    return -1;
 }
 
-dummy::~dummy() {
-    delete ptr;
+void print(vector<string>& s){
+    for(int i=0; i<s.size(); i++){
+        cout<<s[i]<<" ";
+    }
+    cout<<endl;
 }
 
-int dummy::getValue() const {
-    return *ptr;
+void reverseString(vector<string>& s) {
+    vector<string> copy;
+    for(int i=s.size()-1; i>=0; i--){
+        copy.push_back(s[i]);
+    }
+    print(copy);
 }
 
-void dummy::setValue(int in_value) {
-    value = in_value;
-}
+int main(){
 
+    string s="Nikolas";
 
-int main() {
+    string s_copy;
 
-    dummy d(10);
-
-    cout<<d.getValue();
+    for(int i=s.size()-1; i>=0; i--){
+        s_copy.push_back(s[i]);
+    }
+    cout<<s_copy;
 
     return 0;
-
 }
-
-    //    unsigned howMany;
-//    cin >> howMany;
-//    int* storage = new int[howMany];
-//
-//    for(unsigned i = 0; i < howMany; i++) {
-//        cin >> storage[i];
-//    }
-//    for(unsigned i = 0; i < howMany; i++) {
-//        cout << i << ": " << storage[i] << endl;
-//    }
-//    delete[] storage;
-
-

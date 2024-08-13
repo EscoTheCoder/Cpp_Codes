@@ -1,0 +1,3 @@
+C:/Users/nikolas/Desktop/C++/AI_AUTOMATION/cmake-build-debug/CMakeFiles/AI_AUTOMATION.dir
+C:/Users/nikolas/Desktop/C++/AI_AUTOMATION/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nikolas/Desktop/C++/AI_AUTOMATION/cmake-build-debug/CMakeFiles/rebuild_cache.dir

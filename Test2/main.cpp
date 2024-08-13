@@ -1,84 +1,102 @@
 #include <iostream>
 using namespace std;
 
-class Vehicle {
+class Movie{
 public:
-    Vehicle(int doors, int wheels);
-    virtual ~Vehicle();
-    virtual void print();
+    Movie();
+    Movie(const string &name, double scoreImdb, int premiera);
+    virtual double score();
 protected:
-    int doors;
-    int wheels;
+    string name;
+    double score_imdb;
+    int premiera; //prin poses evdomades ekane prepeiera
 };
 
-Vehicle::Vehicle(int doors, int wheels) {
-    cout<<"Constructing Vehicle"<<endl;
-    this->doors=doors;
-    this->wheels=wheels;
-}
-
-Vehicle::~Vehicle() {
-    cout<<"Destructing Vehicle"<<endl;
-}
-
-void Vehicle::print() {
-    cout<<"This is a Car with doors and wheels"<<endl;
-}
-
-
-
-class Car : public Vehicle{
+class Thriller : virtual public Movie{
 public:
-    Car(int doors, int wheels);
-    virtual ~Car();
-    void print();
+    Thriller(const string &name, double scoreImdb, int premiera,int fearFactor);
+    Thriller(int fearFactor);
+    double score() override;
+protected:
+    int fear_factor; //(0-10)
 };
 
-Car::Car(int doors, int wheels):Vehicle(doors,wheels) {
-    cout<<"Constructing Car"<<endl;
-}
-
-Car::~Car() {
-    cout<<"Destructing Car"<<endl;
-}
-
-void Car::print(){
-    cout<<"This is a Car with "<<doors<<" doors"<<" and "<<wheels<<" wheels"<<endl;
-}
-
-class BMW : public Vehicle{
+class Comedy : virtual public Movie{
 public:
-    BMW(int doors, int wheels);
-    virtual ~BMW();
-    void print();
+    Comedy(const string &name, double scoreImdb, int premiera,int funFactor);
+    Comedy(int funFactor);
+    double score() override;
+protected:
+    int fun_factor; //(0-10)
+
 };
 
-BMW::BMW(int doors, int wheels):Vehicle(doors,wheels) {
-    cout<<"Constructing BMW"<<endl;
+class Comedy_Thriller : public Thriller,Comedy{
+public:
+    Comedy_Thriller(const string &name, double scoreImdb, int premiera, int fearFactor, int funFactor);
+    double score() override;
+};
+
+
+
+Movie::Movie() {
 }
 
-BMW::~BMW() {
-    cout<<"Destructing BMW"<<endl;
+Movie::Movie(const string &name, double scoreImdb, int premiera) :
+        name(name), score_imdb(scoreImdb),premiera(premiera) {
 }
 
-void BMW::print(){
-    cout<<"This is a BMW with "<<doors<<" doors"<<" and "<<wheels<<" wheels"<<endl;
+double Movie::score() {
+    return score_imdb/(0.5*premiera);
 }
 
-int main() {
+Thriller::Thriller(const std::string &name, double scoreImdb, int premiera, int fearFactor) :
+        Movie(name,scoreImdb,premiera),fear_factor(fearFactor){
+}
 
-    Vehicle *array[3];
-    array[2]=new Vehicle(0,0);
-    array[0]=new Car(4,4);
-    array[1]=new BMW(2,4);
+Thriller::Thriller(int fearFactor) :
+        Movie(name, score_imdb,premiera),fear_factor(fearFactor) {
+}
 
-    for(int i=0; i<3; i++){
-        array[i]->print();
-    }
+double Thriller::score() {
+    return fear_factor * Movie::score();
+}
 
-    for(int i=0; i<3; i++){
-        delete array[i];
-    }
+Comedy::Comedy(const std::string &name, double scoreImdb, int premiera, int funFactor) :
+        Movie(name,scoreImdb,premiera),fun_factor(funFactor){
+}
+
+Comedy::Comedy(int funFactor) :
+        Movie(name, score_imdb, premiera),fun_factor(funFactor) {
+}
+
+double Comedy::score() {
+    return fun_factor * Movie::score();
+}
+
+Comedy_Thriller::Comedy_Thriller(const string &name, double score_imdb, int premiera, int fearFactor, int funFactor) :
+        Movie(name, score_imdb, premiera),Thriller(fearFactor),Comedy(funFactor) {
+}
+
+double Comedy_Thriller::score() {
+    return ((fun_factor+fear_factor)/2)*Movie::score();
+}
+
+
+int main(){
+
+    Thriller thriller1("IT",6.8,10,8);
+    Thriller thriller2("US",6.9,30,7);
+    Thriller thriller3("Silence Of The Lambs",8.6,1540,9);
+    Comedy comedy1("E of Lamps",8.6,1540,9);
+    Comedy_Thriller comedy_thriller1("IT",6.8,10,8,8);
+
+    cout<<thriller1.score()<<endl;
+    cout<<thriller2.score()<<endl;
+    cout<<thriller3.score()<<endl;
+    cout<<comedy1.score()<<endl;
+    cout<<comedy_thriller1.score()<<endl;
+
 
     return 0;
 }
