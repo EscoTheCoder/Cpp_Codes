@@ -80,8 +80,8 @@ complex complex::operator++ (int right){
 
 complex &complex::operator++ (){
 
-    real++;
-    imag++;
+    ++real;
+    ++imag;
     return *this; //*this  = left stoixeio
 }
 
@@ -104,45 +104,39 @@ complex &complex::operator= (const complex &right) {
 //    }
 //}
 
-complex operator+ (int left, complex &right){
 
-//    complex result;
-//    result.real=left+right.real;
-//    result.imag=left+right.imag;
-//    return result;
-    return complex(left+right.real,left+right.imag);
-}
 
 ostream &operator<<(ostream &left, const complex &right){
     left<<"("<<right.real<<", "<<right.imag<<")";
     return left;
 }
 
-istream &operator>>(istream &left, STRING &obj){
-    char in_str[80];
-
-    left>>in_str;
-    if(obj.str!=NULL){
-    delete [] obj.str;
-    }
-    obj.str = new char [strlen(in_str)+1];  //+1 gia to \0
-    if(!obj.str){
-    cout<<"Error allocating memory";
-    }
-    obj.length= strlen(in_str);
-    strcpy(obj.str,in_str);
-
-    return left;
-}
+//istream &operator>>(istream &left, STRING &obj){
+//    char in_str[80];
+//
+//    left>>in_str;
+//    if(obj.str!=NULL){
+//    delete [] obj.str;
+//    }
+//    obj.str = new char [strlen(in_str)+1];  //+1 gia to \0
+//    if(!obj.str){
+//    cout<<"Error allocating memory";
+//    }
+//    obj.length= strlen(in_str);
+//    strcpy(obj.str,in_str);
+//
+//    return left;
+//}
 
 
 int main() {
 
     complex a(1.0,1.0);
-//    complex b(2.0,3.0);
-//    complex c;
+    complex b(2.0,3.0);
+    complex c=a+b;
 
-    cout<<a;
+
+    cout<<c;
 
 
 

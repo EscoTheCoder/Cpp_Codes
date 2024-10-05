@@ -81,7 +81,6 @@ void Course::print() const {
 void Course::loadFromFile(string &filename) {
     ifstream file(filename ,ios::in);
     if(file.is_open()){
-        string line;
         string name, surname;
         int id;
         float avg;

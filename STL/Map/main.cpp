@@ -39,7 +39,7 @@ int main() {
 
 
 
-    map<string,list<string>> pokemon;
+    /*map<string,list<string>> pokemon;
     list<string> pikachuAttacks = {"mpounia","klotsia","sfaliara"};
     list<string> gaussAttacks = {"fapa","nixia","mpoufla"};
     list<string> bernoulichuAttacks = {"xlepa","maxairia","pistolia"};
@@ -54,7 +54,8 @@ int main() {
             cout << attack<<" ";
         }
         cout<<endl;
-    }
+    }*/
+
 
 
     return 0;
