@@ -15,6 +15,7 @@ public:
     double get_real() const;
     double get_imag() const;
     complex operator+ (const complex &right) const; //operator +    uperfwrtwsh tou telesth +
+	complex operator+ (int i) const; //operator +    uperfwrtwsh tou telesth + (prosthiki arithmou)
     complex operator-(const complex &right) const; //operator -    uperfwrtwsh tou telesth -
     complex operator++ (int right); //operator +    uperfwrtwsh tou telesth ++ -------> x++
     complex &operator++ (); //operator +    uperfwrtwsh tou telesth ++  -----> ++x
@@ -64,6 +65,10 @@ complex complex::operator+ (const complex &right) const{
     return complex(real+right.real,imag+right.imag); //POIO APLOS KAI GRHGORS TROPOS
 }
 
+complex complex::operator+ (int i) const {
+	return complex(real + i, imag + i);
+}
+
 complex complex::operator- (const complex &right) const{
 //    complex result;
 //    result.real=real-right.real;
@@ -95,6 +100,7 @@ complex &complex::operator= (const complex &right) {
     return *this;
 }
 
+
 //int &ARRAY::operator[] (int i) {
 //    if(i>0 && i<n){
 //        return p[i];
@@ -104,6 +110,14 @@ complex &complex::operator= (const complex &right) {
 //    }
 //}
 
+complex operator+ (int left, complex& right) {
+	complex result;
+
+	result.real = left + right.real;
+	result.imag = left + right.imag;
+	
+	return result;
+}
 
 
 ostream &operator<<(ostream &left, const complex &right){
